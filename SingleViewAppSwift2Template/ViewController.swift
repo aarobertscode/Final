@@ -25,7 +25,34 @@ class ViewController: UIViewController {
     }
     @IBAction func button6() {
     }
-   c
+    var allEvents: [String] = ["SOUTHERN STATES PASS LAWS TO DISENFRANCISE BLACKS", "THEODORE ROOSEVELT ELECTED VICE PRESIDENT", "WRIGHT BROTHERS FIRST FLIGHT", "SAN FRANCISCO EARTHQUAKE", "FORD INTRODUCES MODEL T", "WORLD WAR I BEGINS IN EUROPE", "WORLD WAR I ENDS", "TR DIES – CARNEGIE DIES", "GERMAN MONEY HYPER INFLATES", "TREATY OF VERSAILLES, 19TH AMENDMENT", "HINDENBURG ELECTED PRESIDENT OF GERMANY", "STOCK MARKET CRASHES, DEPRESSION BEGINS", "HITLER’S NAZI PARTY GAINS MAJORITY IN PARLIAMENT", "HITLER BEGINS TO TAKE POWER IN GERMANY", "FRANKLIN ROOSEVELT ELECTED PRESIDENT", "FDR INAUGURATED “100 DAYS”", "HINDENBURG DIES, HITLER APPOINTS HIMSELF PRESIDENT  -  “ FUEHRER”", "FDR RE-ELECTED", "German airship HINDENBURG BURNS IN NEW JERSEY", "“MUNICH” – British P.M. Chamberlain agrees that Hitler can have Czechoslovakia.", "Germany invades Holland, Belgium and France – Churchill becomes P.M.", "Germany invades Russia", "JAPANESE ATTACK PEARL HARBOR – U.S. DECLARES WAR ON JAPAN", "HITLER DECLARES WAR ON U.S."]
+    var eventIndex1: Int = 0
+    var eventIndex2: Int = 0
+    var eventIndex3: Int = 0
+    var eventIndex4: Int = 0
+    
+    func generateRandomIndex() -> [Int] {
+        while (eventIndex1 == eventIndex2) && (eventIndex2 == eventIndex3) && (eventIndex1 == eventIndex3) && (eventIndex1 == eventIndex4) && (eventIndex2 == eventIndex4) && (eventIndex3 == eventIndex4) {
+            eventIndex1 = GKRandomSource.sharedRandom().nextInt(upperBound: allEvents.count)
+            eventIndex2 = GKRandomSource.sharedRandom().nextInt(upperBound: allEvents.count)
+            eventIndex3 = GKRandomSource.sharedRandom().nextInt(upperBound: allEvents.count)
+            eventIndex4 = GKRandomSource.sharedRandom().nextInt(upperBound: allEvents.count)
+        }
+        return [eventIndex1, eventIndex2, eventIndex3, eventIndex4]
+    }
+    
+    var eventIndexes = generateRandomIndex()
+    var index1 = eventIndexes[0]
+    var index2 = eventIndexes[1]
+    var index3 = eventIndexes[2]
+    var index4 = eventIndexes[3]
+    var event1 = allEvents[index1]
+    var event2 = allEvents[index2]
+    var event3 = allEvents[index3]
+    var event4 = allEvents[index4]
+    
+    var events: [String] = [event1, event2, event3, event4]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var indexOne: Int = 0
