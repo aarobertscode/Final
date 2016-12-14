@@ -148,17 +148,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAx-co-yrD">
-                                <rect key="frame" x="110" y="593" width="155" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAx-co-yrD">
+                                <rect key="frame" x="78" y="587" width="219" height="72"/>
                                 <state key="normal" title="Button" image="next_round_success.png"/>
                                 <connections>
                                     <action selector="nextRoundButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypd-sj-QGN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvZ-Gb-MVf">
+                                <rect key="frame" x="315" y="604" width="60" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="RD0-Zq-anl" secondAttribute="trailing" constant="150" id="4YL-Wg-zkY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yvZ-Gb-MVf" secondAttribute="trailing" constant="8" id="4p8-Lt-dfN"/>
                             <constraint firstItem="RD0-Zq-anl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="5kz-me-DfF"/>
                             <constraint firstItem="ZA1-oW-OQy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="7Oc-Ip-pU1"/>
                             <constraint firstItem="RSY-mY-RQL" firstAttribute="leading" secondItem="Qmc-Zs-Tl4" secondAttribute="trailing" id="8S6-j4-Iol"/>
@@ -172,6 +179,7 @@
                             <constraint firstItem="eR3-lt-C3K" firstAttribute="top" secondItem="KBS-fK-WDs" secondAttribute="bottom" id="MN7-ed-zCZ"/>
                             <constraint firstItem="Ltv-My-tqM" firstAttribute="leading" secondItem="ZA1-oW-OQy" secondAttribute="trailing" id="POl-Je-4bs"/>
                             <constraint firstItem="Ltv-My-tqM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="PhD-A6-LRj"/>
+                            <constraint firstItem="yvZ-Gb-MVf" firstAttribute="leading" secondItem="BAx-co-yrD" secondAttribute="trailing" constant="44" id="ROY-Dd-Utr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RSY-mY-RQL" secondAttribute="trailing" constant="5" id="WCW-HB-goS"/>
                             <constraint firstItem="6bF-ay-5Jc" firstAttribute="leading" secondItem="AFg-Dm-e9d" secondAttribute="trailing" id="XJy-Z5-9FB"/>
                             <constraint firstItem="AFg-Dm-e9d" firstAttribute="top" secondItem="B3q-Dw-12d" secondAttribute="bottom" constant="5" id="Yfu-HS-WiC"/>
@@ -185,8 +193,10 @@
                             <constraint firstItem="KBS-fK-WDs" firstAttribute="top" secondItem="RSY-mY-RQL" secondAttribute="bottom" constant="5" id="pQj-al-9gf"/>
                             <constraint firstItem="Gvc-JA-a0e" firstAttribute="top" secondItem="Ltv-My-tqM" secondAttribute="bottom" constant="5" id="rt5-ss-FbT"/>
                             <constraint firstItem="eR3-lt-C3K" firstAttribute="leading" secondItem="B3q-Dw-12d" secondAttribute="trailing" id="rxg-nd-Mdy"/>
+                            <constraint firstItem="yvZ-Gb-MVf" firstAttribute="top" secondItem="6bF-ay-5Jc" secondAttribute="bottom" constant="29" id="sfp-Tm-blb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KBS-fK-WDs" secondAttribute="trailing" constant="5" id="tNr-Xj-YMf"/>
                             <constraint firstItem="6bF-ay-5Jc" firstAttribute="top" secondItem="eR3-lt-C3K" secondAttribute="bottom" constant="5" id="trb-xg-uxj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yvZ-Gb-MVf" secondAttribute="bottom" constant="30" id="uSi-v4-rrF"/>
                             <constraint firstItem="Qmc-Zs-Tl4" firstAttribute="top" secondItem="ZA1-oW-OQy" secondAttribute="bottom" constant="5" id="vlW-vG-S3x"/>
                             <constraint firstItem="RSY-mY-RQL" firstAttribute="top" secondItem="Gvc-JA-a0e" secondAttribute="bottom" id="wAF-cn-Joy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6bF-ay-5Jc" secondAttribute="trailing" constant="5" id="y8t-2z-2i6"/>
@@ -199,6 +209,7 @@
                         <outlet property="label3" destination="B3q-Dw-12d" id="6Cw-YY-Xju"/>
                         <outlet property="label4" destination="AFg-Dm-e9d" id="CpM-qN-0gD"/>
                         <outlet property="nextRoundButtonOutlet" destination="BAx-co-yrD" id="F7h-dw-dRB"/>
+                        <outlet property="scoree" destination="yvZ-Gb-MVf" id="qti-Nr-yml"/>
                         <outlet property="timerLabel" destination="RD0-Zq-anl" id="nbh-xW-BIA"/>
                     </connections>
                 </viewController>
